@@ -33,7 +33,7 @@ class SiteController extends Controller
     public function home()
     {
         return $this->render('home', [
-            'name' => 'TheCodeholic'
+            'name' => 'Trung Pham'
         ]);
     }
 
@@ -95,10 +95,11 @@ class SiteController extends Controller
             error_log("inside post");
 
             if ($UpdateModel->Update_validate(['firstname', 'lastname', 'email']) && $UpdateModel->update()) {
-                Application::$app->response->redirect('/profile');
+                Application::$app->response->redirect('/profile_update');
                 return;
             }
         }
+
         return $this->render('profile_update', [
             'model' => $UpdateModel
         ]);
