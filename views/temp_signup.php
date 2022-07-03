@@ -1,8 +1,8 @@
 <?php
 
-/** @var $model \thecodeholic\phpmvc\Model */
 
-use thecodeholic\phpmvc\form\Form;
+
+use app\core\form\Form;
 
 $form = new Form();
 ?>

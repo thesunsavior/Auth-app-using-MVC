@@ -1,8 +1,6 @@
 <?php
 
-/** @var $this \thecodeholic\phpmvc\View */
-
-use thecodeholic\phpmvc\Application;
+use app\core\Application;
 
 $this->title = 'Profile';
 
@@ -26,21 +24,21 @@ $this->title = 'Profile';
     <img class='avatar' src="/media/<?php echo Application::$app->user->img_name ?>" alt="Avatar pic"><img>
     <div class='body-wrapper'>
         <div class="user-info">
-            <h2> Trung Rom
+            <h2> <?php echo Application::$app->user->lastname ?> <?php echo Application::$app->user->firstname ?>
         </div>
-        <div class="user-desc">Owner</div>
+        <div class="user-desc">Unassigned job title</div>
         <div class="user-detail-desc">
             <div class="info-row">
                 <div class="info-title">Email address</div>
-                <div class="info-content">asd@gmail.com</div>
+                <div class="info-content"><?php echo Application::$app->user->email ?></div>
             </div>
             <div class="info-row">
-                <div class="info-title">Phone Number</div>
-                <div class="info-content">08123532366</div>
+                <div class="info-title">Company name</div>
+                <div class="info-content">unassigned</div>
             </div>
             <div class="info-row">
-                <div class="info-title">Direct managers</div>
-                <div class="info-content">dsadsadasdasdasdas</div>
+                <div class="info-title">Phone number</div>
+                <div class="info-content">unassigned</div>
             </div>
 
         </div>
@@ -74,7 +72,7 @@ $this->title = 'Profile';
     }
 
     .user-desc {
-        font-size: 12px;
+        font-size: 15px;
         color: grey;
     }
 

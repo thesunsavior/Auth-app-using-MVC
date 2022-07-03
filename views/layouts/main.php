@@ -34,7 +34,7 @@
             </ul>
             <?php
 
-            use thecodeholic\phpmvc\Application;
+            use app\core\Application;
 
             if (Application::isGuest()) : ?>
                 <ul class="navbar-nav ml-auto">

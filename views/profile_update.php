@@ -2,8 +2,8 @@
 
 /** @var $model \app\models\LoginForm */
 
-use thecodeholic\phpmvc\form\Form;
-use thecodeholic\phpmvc\Application;
+use app\core\form\Form;
+use app\core\Application;
 
 // error_log("After POSTEE");
 
