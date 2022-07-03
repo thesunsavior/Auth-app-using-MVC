@@ -29,6 +29,8 @@ $app->on(Application::EVENT_BEFORE_REQUEST, function () {
     // echo "Before request from second installation";
 });
 
+
+// set up router
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/register', [SiteController::class, 'register']);
 $app->router->post('/register', [SiteController::class, 'register']);

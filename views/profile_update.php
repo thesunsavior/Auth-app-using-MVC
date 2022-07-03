@@ -5,10 +5,10 @@
 use thecodeholic\phpmvc\form\Form;
 use thecodeholic\phpmvc\Application;
 
-error_log("After POSTEE");
+// error_log("After POSTEE");
 
-error_log(sizeof($_FILES));
-error_log(sizeof($_POST));
+// error_log(sizeof($_FILES));
+// error_log(sizeof($_POST));
 
 
 ?>
