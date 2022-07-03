@@ -26,7 +26,7 @@ $this->title = 'Profile';
         <div class="user-info">
             <h2> <?php echo Application::$app->user->lastname ?> <?php echo Application::$app->user->firstname ?>
         </div>
-        <div class="user-desc">Unassigned job title</div>
+        <div class="user-desc"><?php echo Application::$app->user->job_tile ?></div>
         <div class="user-detail-desc">
             <div class="info-row">
                 <div class="info-title">Email address</div>
@@ -34,7 +34,7 @@ $this->title = 'Profile';
             </div>
             <div class="info-row">
                 <div class="info-title">Company name</div>
-                <div class="info-content">unassigned</div>
+                <div class="info-content"><?php echo Application::$app->user->company_name ?></div>
             </div>
             <div class="info-row">
                 <div class="info-title">Phone number</div>

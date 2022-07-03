@@ -28,6 +28,16 @@ use app\core\Application;
             </div>
         </div>
         <?php echo $form->field($model, 'email', 'text') ?>
+
+        <div class="row">
+            <div class="col">
+                <?php echo $form->field($model, 'job_tile', 'text') ?>
+            </div>
+            <div class="col">
+                <?php echo $form->field($model, 'company_name', 'text') ?>
+            </div>
+        </div>
+
         <button class="btn btn-success" name="submit">Submit</button>
         <?php Form::end() ?>
     </div>

@@ -20,6 +20,9 @@ abstract class DbModel extends Model
         $tableName = $this->tableName();
         $attributes = $this->attributes();
         unset($attributes[4]);
+        unset($attributes[5]);
+        unset($attributes[6]);
+
 
         $params = array_map(fn ($attr) => ":$attr", $attributes);
         $statement = self::prepare("INSERT INTO $tableName (" . implode(",", $attributes) . ") 

@@ -15,6 +15,9 @@ class User extends UserModel
     public string $password = '';
     public string $passwordConfirm = '';
     public string $img_name = '';
+    public string $job_tile = '';
+    public string $company_name = '';
+
 
     public static function tableName(): string
     {
@@ -23,7 +26,7 @@ class User extends UserModel
 
     public function attributes(): array
     {
-        return ['firstname', 'lastname', 'email', 'password', 'img_name'];
+        return ['firstname', 'lastname', 'email', 'password', 'img_name', 'job_tile', 'company_name'];
     }
 
     public function labels(): array
@@ -34,7 +37,9 @@ class User extends UserModel
             'email' => 'Email',
             'password' => 'Password',
             'passwordConfirm' => 'Password Confirm',
-            'img_name' => 'Avatar image'
+            'img_name' => 'Avatar image',
+            'job_tile' => 'job title',
+            'company_name' => 'company name',
         ];
     }
 
@@ -71,10 +76,14 @@ class User extends UserModel
 
 
         foreach ($attributes as $attribute) {
-            if ($this->{$attribute} != null)
+            if ($this->{$attribute} != null) {
                 $statement->bindValue(":$attribute", $this->{$attribute});
-            else {
+                error_log($attribute);
+                error_log("not null");
+            } else {
                 $statement->bindValue(":$attribute", Application::$app->user->{$attribute});
+                error_log($attribute);
+                error_log("null");
             }
         }
 
