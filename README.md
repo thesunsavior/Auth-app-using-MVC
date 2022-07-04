@@ -1,1 +1,1 @@
-A basic Auth app using mvc framework for BaseVn Home test
+A basic Auth app using PHP MVC frame work
