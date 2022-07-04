@@ -5,6 +5,7 @@ namespace app\core;
 
 class Request
 {
+    static public $pictureHolder = "";
     private array $routeParams = [];
 
     public function getMethod()
@@ -34,6 +35,7 @@ class Request
 
     public function getBody()
     {
+        request::$pictureHolder = "";
         $data = [];
         if ($this->isGet()) {
             foreach ($_GET as $key => $value) {
@@ -51,6 +53,7 @@ class Request
             $real_name = $_FILES['img_name']['name'];
             $simg_name = $_FILES['img_name']['tmp_name'];
             var_dump($_FILES);
+            request::$pictureHolder = $real_name;
             error_log("printing names");
             error_log($simg_name);
             if ($simg_name != "")

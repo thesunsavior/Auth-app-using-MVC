@@ -5,6 +5,7 @@ namespace app\models;
 use app\core\Application;
 use app\core\DbModel;
 use app\core\UserModel;
+use app\core\request;
 
 class User extends UserModel
 {
@@ -74,6 +75,7 @@ class User extends UserModel
         $statement = self::prepare("UPDATE $tableName SET " . implode(",", $params) . " WHERE id = $pk");
         $test = "UPDATE $tableName SET (" . implode(",", $params) . ") WHERE id = $pk";
 
+        $this->img_name = request::$pictureHolder;
 
         foreach ($attributes as $attribute) {
             if ($this->{$attribute} != null) {
